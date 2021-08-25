@@ -1,0 +1,9 @@
+https://www.engbedded.com/fusecalc/
+
+Low	High	AVRDUDE arguments
+0x6A    0xFF    -U lfuse:w:0x6a:m -U hfuse:w:0xff:m
+/* 9.6MHz /8 = 1.2MHz */
+
+avrdude -p attiny13 -b 9600 -c usbasp -v -v -U flash:w:filasense.hex -U lfuse:w:0x6a:m -U hfuse:w:0xff:m
+avrdude -p attiny13 -b 9600 -c usbasp -v -v -U flash:w:filasense.hex
+
